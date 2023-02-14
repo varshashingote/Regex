@@ -31,14 +31,11 @@ namespace RegularExpresion
                     Console.ReadLine();
                     break;
                 case 3:
-
-                    Console.WriteLine("Enter Email: ");
+                    Console.WriteLine("Enter The Email: ");
                     string email = Console.ReadLine();
                     userValidation.ValidationFirstName(email);
                     Console.ReadLine();
                     break;
-            
-
 
 
 
