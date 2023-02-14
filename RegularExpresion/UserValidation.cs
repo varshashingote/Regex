@@ -10,6 +10,8 @@ namespace RegularExpresion
     public class UserValidation
     {
         public const string FIRST_NAME_REGEX = "^[A-Z]{1}[a-zA-Z]{3,}$";
+        public const string LAST_NAME_REGEX = "^[A-Z]{1}[a-z A-Z]{3,}$";
+        public const string EMAIL_REGEX = "^[a-z0-9]{1,10}[@][a-zA-Z]{5}[.][a-zA-Z]{2,3}$";
         public void ValidationFirstName(string firstname)
         {
             Regex regex = new Regex(FIRST_NAME_REGEX);
@@ -17,5 +19,20 @@ namespace RegularExpresion
             Console.WriteLine(result);
 
         }
+        public void ValidationLastName(string lastName)
+        {
+            Regex regex = new Regex(LAST_NAME_REGEX);
+            bool result = regex.IsMatch(lastName);
+            Console.WriteLine(result);
+        }
+       
+        public void ValidationEmail(string email)
+        {
+            Regex regex = new Regex(EMAIL_REGEX);
+            bool result = regex.IsMatch(email);
+            Console.WriteLine(result);
+
+        }
+
     }
 }
