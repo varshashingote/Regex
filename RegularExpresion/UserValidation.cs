@@ -11,11 +11,13 @@ namespace RegularExpresion
     {
         public const string FIRST_NAME_REGEX = "^[A-Z]{1}[a-zA-Z]{3,}$";
         public const string LAST_NAME_REGEX = "^[A-Z]{1}[a-z A-Z]{3,}$";
-        public const string EMAIL_REGEX = @"^([abc]+)(\.[a-z0-9_\+\-]+)?@([b1]+)\.([co]{2,4})(\.[a-z]{2,})?$";
+        public const string EMAIL_REGEX = @"^([abc]+)(\.[a-z0-9_\+\-]+)?@([bl]+)\.([co]{2,4})(\.[a-z]{2,})?$";
         public const string MOBILENUMBER_REGEX = "^[0-9]+[\\s]+[0-9]{10}$";
         public const string PASSWORD_REGEX = "[a-z,A-Z,0-9]{8,}$"; 
         public const string UPPERCASE_REGEX = "^[A-Z][a-z]{7}$";
         public const string NUMERICPASSWORD_REGEX = "^[a-z0-9A-Z]{8}$";
+        public const string SPECIALCHARACCTER_REGEX = "^[a-zA-Z0-9]{4,}(@)$";
+
 
 
 
@@ -69,6 +71,14 @@ namespace RegularExpresion
             bool result = regex.IsMatch(numericpassword);
             Console.WriteLine(result);
         }
+        public void ValidationSpecialCharacterPassword (string SpecialChar)
+        {
+            Regex regex = new Regex(SPECIALCHARACCTER_REGEX);
+            bool result = regex.IsMatch(SpecialChar);
+            Console.WriteLine(result);
+        }
+
+
 
 
 

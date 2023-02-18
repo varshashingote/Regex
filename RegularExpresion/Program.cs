@@ -13,7 +13,8 @@ namespace RegularExpresion
             Console.WriteLine("Welcome to User Registration Problems Statement Using REGEX");
             UserValidation userValidation = new UserValidation();
             Console.WriteLine("Enter your choice \n1.NameValidation \n2.LastNameValidation\n3.EmailValidation" +
-                "\n4.PhoneNumberValidation \n5.PasswordValidation \n6. AtLeastoneUppercase \n7.AtLEastOneNumeric");
+                "\n4.PhoneNumberValidation \n5.PasswordValidation \n6. AtLeastoneUppercase \n7.AtLEastOneNumeric" +
+                "\n8.AtLeastOneSpecialChar");
             int choice = Convert.ToInt32(Console.ReadLine());
 
             switch (choice)
@@ -34,7 +35,7 @@ namespace RegularExpresion
                 case 3:
                     Console.WriteLine("Enter The Email: ");
                     string email = Console.ReadLine();
-                    userValidation.ValidationFirstName(email);
+                    userValidation.ValidationEmail(email);
                     Console.ReadLine();
                     break;
                 case 4:
@@ -52,16 +53,23 @@ namespace RegularExpresion
                 case 6:
                     Console.WriteLine("Enter The Name ");
                     string Uppercase = Console.ReadLine();
-                    userValidation.ValidationPassword(Uppercase);
+                    userValidation.ValidationUppercase(Uppercase);
                     Console.ReadLine();
                     break;
                 case 7:
 
-                    Console.WriteLine("Enter The Name ");
+                    Console.WriteLine("Enter The password ");
                     string numericpassword = Console.ReadLine();
-                    userValidation.ValidationPassword(numericpassword);
+                    userValidation.ValidationNumericPassword(numericpassword);
                     Console.ReadLine();
                     break;
+                case 8:
+                    Console.WriteLine("Enter The password ");
+                    string SpecialChar = Console.ReadLine();
+                    userValidation.ValidationSpecialCharacterPassword(SpecialChar);
+                    Console.ReadLine();
+                    break;
+
 
 
 
