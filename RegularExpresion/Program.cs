@@ -27,13 +27,13 @@ namespace RegularExpresion
                 case 2:
                     Console.WriteLine("Enter The Last Name: ");
                     string Lastname = Console.ReadLine();
-                    userValidation.ValidationFirstName(Lastname);
+                    userValidation.ValidationLastName(Lastname);
                     Console.ReadLine();
                     break;
                 case 3:
                     Console.WriteLine("Enter The Email: ");
                     string email = Console.ReadLine();
-                    userValidation.ValidationFirstName(email);
+                    userValidation.ValidationEmail(email);
                     Console.ReadLine();
                     break;
 
