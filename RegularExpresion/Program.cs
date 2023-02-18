@@ -59,7 +59,7 @@ namespace RegularExpresion
 
                     Console.WriteLine("Enter The Name ");
                     string numericpassword = Console.ReadLine();
-                    userValidation.ValidationPassword(numericpassword);
+                    userValidation.ValidationNumericPassword(numericpassword);
                     Console.ReadLine();
                     break;
 
