@@ -13,7 +13,7 @@ namespace RegularExpresion
             Console.WriteLine("Welcome to User Registration Problems Statement Using REGEX");
             UserValidation userValidation = new UserValidation();
             Console.WriteLine("Enter your choice \n1.NameValidation \n2.LastNameValidation\n3.EmailValidation" +
-                "\n4.PhoneNumber");
+                "\n4.PhoneNumberValidation \n5.PasswordValidation");
             int choice = Convert.ToInt32(Console.ReadLine());
 
             switch (choice)
@@ -43,6 +43,13 @@ namespace RegularExpresion
                     userValidation.ValidationPhoneNumber(phonenumber);
                     Console.ReadLine();
                     break;
+                case 5:
+                    Console.WriteLine("Enter password 8 characters");
+                    string password = Console.ReadLine();
+                    userValidation.ValidationPassword(password);
+                    Console.ReadLine();
+                    break;
+
 
 
 
