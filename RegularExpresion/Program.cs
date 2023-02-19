@@ -14,7 +14,7 @@ namespace RegularExpresion
             UserValidation userValidation = new UserValidation();
             Console.WriteLine("Enter your choice \n1.NameValidation \n2.LastNameValidation\n3.EmailValidation" +
                 "\n4.PhoneNumberValidation \n5.PasswordValidation \n6. AtLeastoneUppercase \n7.AtLEastOneNumeric" +
-                "\n8.AtLeastOneSpecialChar");
+                "\n8.AtLeastOneSpecialChar \n9 SpecialEmail");
             int choice = Convert.ToInt32(Console.ReadLine());
 
             switch (choice)
@@ -67,6 +67,12 @@ namespace RegularExpresion
                     Console.WriteLine("Enter The password ");
                     string SpecialChar = Console.ReadLine();
                     userValidation.ValidationSpecialCharacterPassword(SpecialChar);
+                    Console.ReadLine();
+                    break;
+                case 9:
+                    Console.WriteLine("Enter The Email");
+                    string specialemail = Console.ReadLine();
+                    userValidation.ValidationEmailall(specialemail);
                     Console.ReadLine();
                     break;
 

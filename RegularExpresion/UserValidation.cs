@@ -17,6 +17,7 @@ namespace RegularExpresion
         public const string UPPERCASE_REGEX = "^[A-Z][a-z]{7}$";
         public const string NUMERICPASSWORD_REGEX = "^[a-z0-9A-Z]{8}$";
         public const string SPECIALCHARACCTER_REGEX = "^[a-zA-Z0-9]{4,}(@)$";
+        public const string EmailValidation= "^[a-zA-Z0-9]+[.+-_]{0,1}[a-zA-Z0-9]+[@][a-zA-Z]+[.][a-zA-Z]{2,3}([.][a-zA-Z]{2,3}){0,1}$";
 
 
 
@@ -77,7 +78,12 @@ namespace RegularExpresion
             bool result = regex.IsMatch(SpecialChar);
             Console.WriteLine(result);
         }
-
+        public void ValidationEmailall(String specialemail)
+        {
+            Regex regex = new Regex(EmailValidation);
+            bool result = regex.IsMatch(specialemail);
+            Console.WriteLine(result);
+        }
 
 
 
