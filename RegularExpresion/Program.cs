@@ -32,7 +32,7 @@ namespace RegularExpresion
                     case 1:
                         Console.Clear();
                         //UC1-First name starts with Cap and has minimum 3 characters
-                        string firstNamePattern = "^[A-Z]{1}[a-z]{2,}$";//Jyoti
+                        string firstNamePattern = "^[A-Z]{1}[a-z]{2,}$";
                         Console.WriteLine("Enter first name want to check for validation:");
                         string firstNameInputs = Console.ReadLine();
                         Console.WriteLine("\nAfter check validation result is:\n-------------------------------------");
@@ -43,7 +43,7 @@ namespace RegularExpresion
                     case 2:
                         Console.Clear();
                         //UC2-Last name starts with Cap and has minimum 3 characters
-                        string lastNamePattern = "^[A-Z]{1}[a-z]{2,}$";//Rao
+                        string lastNamePattern = "^[A-Z]{1}[a-z]{2,}$";
                         Console.WriteLine("Enter last name want to check for validation:");
                         string lastNameInputs = Console.ReadLine();
                         Console.WriteLine("\nAfter check validation result is:\n-------------------------------------");
@@ -66,7 +66,7 @@ namespace RegularExpresion
                     case 4:
                         Console.Clear();
                         //UC4-Country code follow by space and 10 digit number.
-                        string mobileNumberPattern = "^[1-9]{2}?([ ])[0-9]{10}$";//91 9919819801
+                        string mobileNumberPattern = "^[1-9]{2}?([ ])[0-9]{10}$";
                         Console.WriteLine("Enter mobile number want to check for validation:");
                         string mobileNumberInputs = Console.ReadLine();
                         Console.WriteLine("\nAfter check validation result is:\n-------------------------------------");
