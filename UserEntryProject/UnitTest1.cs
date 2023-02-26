@@ -77,7 +77,25 @@ namespace UserEntryProject
                 //Assert
                 Assert.AreEqual(expected, actual);
             }
+
+
+        [TestMethod]
+        public void TestValidationForEmailSamples()
+        {
+            //Arrange
+            string[] input = { "abc@yahoo.com,", "abc-100@yahoo.com,", "abc.100@yahoo.com", "abc111@abc.com,", "abc-100@abc.net,", "abc.100@abc.com.au", "abc.100@abc.com.au", "abc@1.com,", "abc@gmail.com.com" };
+            string pattern = @"^([a-z0-9\.\-]+)?@([a-z0-9]+)\.([a-z\,\.]+)$";
+            string expected = "Valid";
+            Pattern pattern1 = new Pattern();
+            foreach (string inputItem in input)
+            {
+                //Act
+                string actual = pattern1.ValidateUserEntry(inputItem, pattern);
+                //Assert
+                Assert.AreEqual(expected, actual);
+            }
         }
+    }
     }
 
 
